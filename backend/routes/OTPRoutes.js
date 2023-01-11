@@ -141,6 +141,8 @@ router.post(
 					res.cookie('smsapp_accesstoken', token, {
 						httpOnly: true,
 						secure: false,
+						// any domain
+						domain: process.env.COOKIE_DOMAIN,
 						// exires in 1 month
 						expires: new Date(Date.now() + 2592000000),
 					})
