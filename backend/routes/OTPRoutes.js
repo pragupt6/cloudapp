@@ -141,7 +141,7 @@ router.post(
 					res.cookie('smsapp_accesstoken', token, {
 						httpOnly: true,
 						secure: process.env.NODE_ENV === 'production' ? true : false,
-						sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+						sameSite: 'none',
 
 						// any domain
 						domain: process.env.COOKIE_DOMAIN,
